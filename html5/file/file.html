@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" id="fileSelect">Select some files</a>
+    <input id="file" type="file" style="display:none">
+    <script>
+
+        var file = document.querySelector('#file');
+        var fileSelect = document.querySelector("#fileSelect");;
+        file.onchange = function(){
+            var files = this.files;
+            var numFiles = files.length;
+            var file =files[0];
+            console.log('file size' + files.size);
+        }
+        fileSelect.addEventListener('click', function(e) {
+            if (file) {
+                file.click();
+            }
+            e.preventDefault();
+        }, false);
+    </script>
+</body>
+</html>
