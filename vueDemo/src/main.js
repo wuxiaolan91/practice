@@ -1,4 +1,4 @@
-import newrelic from 'newrelic'
+require('newrelic');
 import Vue from 'vue'
 import App from './App.vue'
 
